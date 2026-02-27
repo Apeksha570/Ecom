@@ -22,8 +22,8 @@ export const createUser = async(req,res)=>{
     const addData = await User.create({
       name:username,
       email:useremail,
-      phone:userphone,
-      
+      phone:userphone
+       
     });// or you can also write directly as req.body only  && send the same keys from the frontend and this concept is called as destructuring  
     res.status(201).json({
         success:true,

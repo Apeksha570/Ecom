@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
         required:true
     }
 })
-const User = mongoose.model("User",userSchema) //userSchema is the variable u gave 
+const User = mongoose.model("User",userSchema) //userSchema is the variable u gave thhis only given to the postschema
 export default User;
 
 //steps:

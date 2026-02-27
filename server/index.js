@@ -5,6 +5,7 @@ import mongoConnection from './db.js'
 import userRouter from './routes/userRoutes.js'
 import cors from'cors'
 import authRouter from './routes/authRoutes.js'
+import postRouter from './routes/postRoutes.js'
 
  const app = express()
 app.use(express.json())   //middleware is needed inorder to recieve/pass json data from the frontend
@@ -22,6 +23,7 @@ app.get("/test" ,(req,res)=>{
 //create a middleware called /users and by using this only we can access the route
 app.use("/users", userRouter) //it should be placed before app.listen 
 app.use("/auth", authRouter)
+app.use("/post", postRouter)
 
 app.listen(PORT,()=>{
     console.log("Server Stared on " + PORT)

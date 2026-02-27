@@ -61,12 +61,16 @@ export const loginUser = async(req,res) => {
                 message:"invalid password!"
             })
         } 
+
         //Token: means information of user in a secure way if you have one token then only you can access the data 
-       //Token genrate should be after checking the password
-       // A JSON Web Token (JWT) is a secure way to send information between a client and a server. It is mainly used in web applications and APIs.
-       //const token = await (jwt is which you had imported as package)jwt.sign({payload},SECRETKEY,{options}) sign() is buli in functions
-       const token =await jwt.sign({
-         id:userExist._id, name:userExist.name}, SECRETKEY, {expiresIn:'3h'})   
+        //Token genrate should be after checking the password
+        // A JSON Web Token (JWT) is a secure way to send information between a client and a server. It is mainly used in web applications and APIs.
+        //const token = await (jwt is which you had imported as package)jwt.sign({payload},SECRETKEY,{options}) sign() is buli in functions
+        //structure  of token => eader.payload.signature
+        //header =>metadata about token, payload =>data
+        //  signature=>secret key + header + payload
+
+       const token =await jwt.sign({id:userExist._id, name:userExist.name}, SECRETKEY, {expiresIn:'3h'})   
         
         res.status(200).json({
                 success:true,

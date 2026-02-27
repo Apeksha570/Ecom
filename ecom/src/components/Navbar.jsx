@@ -122,19 +122,14 @@ function ResponsiveAppBar() {
           >
            Logo
           </Typography>
-          <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >Home
-              </Button> 
+        
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             
               {/**For navigation purpose Link tag is used and here you removed the pages.map */}
              <Button
                 onClick={handleCloseNavMenu} //here navigation is done after using useNavigate()
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Home
+              > Home
               </Button>
 
               <Button
@@ -151,18 +146,6 @@ function ResponsiveAppBar() {
               >
                 About
               </Button>
-               
-               <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >About
-              </Button> 
-              
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >Products
-              </Button> 
           
          
           </Box>

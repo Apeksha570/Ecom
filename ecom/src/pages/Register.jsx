@@ -21,7 +21,7 @@ export default function Register() {
             console.log(res)
             if(res.data.success){
                 alert("Rrgistration is successful")
-            }
+            }//users/addUser also can be given in path
             else{
                 alert("Registration Failed Try again")
             }
